@@ -12,7 +12,7 @@ int Unique(int arr[], int n)
     int Unique = 0;
     for (int i = 0; i < n; i++) {
         for (int j = n - 1; j >= 0; j--) {
-            if (arr[i] == arr[j]) {
+            if ((arr[i] ^ arr[j])) {
                 Unique = arr[i];
             }
         }
@@ -21,9 +21,9 @@ int Unique(int arr[], int n)
 }
 int main()
 {
-    int arr[] = { 1, 2, 3, 4, 1, 2, 3, 4, 5 };
+    int arr[] = { 4, 1, 2, 1, 2 };
     cout << "Original Array is ";
     printArr(arr, (sizeof(arr) / 4));
-    cout << "Unique number is " << Unique(arr, (sizeof(arr) / 4))    << endl;
+    cout << "Unique number is " << Unique(arr, (sizeof(arr) / 4)) << endl;
     return 0;
 }
