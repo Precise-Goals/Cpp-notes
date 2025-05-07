@@ -1,0 +1,61 @@
+Time and Space Complexity
+
+not actual time taken to completely execute the program
+amount of time taken as function of input size(n) 
+no of operations as function of input size
+
+y axis pe operations 
+x axis pe input size    
+
+The time complexity is notated in big of N notation
+there are three kind of notation
+O() upper bond - for worst case analysis
+Phi() lower bond - for best case analysis
+
+Rules:
+1. Time Complexity should be Computed in worst case scenarios
+2. avoid the constants as Constraints are too big 
+3. avoid the lower values of Complexities too
+
+eg 
+for(int i=0;i<=n;i++){
+    // block of code
+}
+
+3 steps per loop
+TC = O(3N)
+
+now, 
+for(int i=0;i<=N;i++){
+    for(int j=0;j<=N;j++){
+    // block of code 
+    }
+}
+TC = O(N*N)
+
+for(int i=0;i<=N;i++){
+    for(int j=0;j<=i;j++){
+    // block of code 
+    }
+}
+
+i = 0 j = 0
+i = 1 j = 0, 1
+i = 2 j = 0, 1, 2
+i = n j = 0 - n-1
+
+total no of loops = 1 + 2 + 3 + 4 + 5 + ..... + n
+thats why
+TC = n(n-1) / 2
+TC = O(n^2/2 - n/2)
+avoid lower values
+TC = O(n^2/2) 
+avoid constants
+TC = O(n^2)
+
+
+Space Complexity
+Space complexity is not directly related to how much space does program take
+it only gives us idea about how much input size and auxiliary size is
+input space complexity is the complexity in which it is size of inputted variables
+auxiliary space complexity is what the requuired space for program
