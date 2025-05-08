@@ -17,7 +17,7 @@ int main()
         b2 /= 10;
     }
     if (r != 0) {
-        sum[i++] += r;
+        sum[i++] = r;
     }
     --i;
     cout << "The sum of two binary numbers is: ";

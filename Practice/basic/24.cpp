@@ -9,6 +9,6 @@ int main()
     cin >> n;
     cout << "Enter the length of each side: ";
     cin >> l;
-    cout << "The area of polygon with " << n << " sides is " << (0.25 * n * pow(l, 2)) / tan(M_PI / n) << endl;
+    cout << "The area of polygon with " << n << " sides is " << (0.25 * n * pow(l, 2)) * atan(M_PI / n) << endl;
     return 0;
 }
