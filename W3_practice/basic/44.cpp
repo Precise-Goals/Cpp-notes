@@ -3,17 +3,7 @@
 using namespace std;
 bool isleap(int a)
 {
-    if (a % 400 == 0) {
-        return true;
-    }
-    if (a % 100 == 0) {
-        return false;
-    }
-    if (a % 4 == 0) {
-        return true;
-    }
-
-    return false;
+    return (a % 400 == 0 || ((a % 4 == 0) && (a % 100 != 0)));
 }
 int main()
 {

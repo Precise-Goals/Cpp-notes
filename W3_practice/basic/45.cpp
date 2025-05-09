@@ -12,9 +12,9 @@ int main()
 
     cout << "original text: " << samp << endl;
     for (int i = 0; i < (int)samp.size(); i++) {
-        string key = samp.substr(i, 3);
+        string key = samp.substr(i, (int)od.size());
         if (key == od) {
-            for (int k = 0; k < 3; k++) {
+            for (int k = 0; k < (int)od.size(); k++) {
                 samp[i + k] = nw[k];
             }
         }
